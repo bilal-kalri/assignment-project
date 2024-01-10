@@ -11,6 +11,21 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+ul {
+  list-style: none;
+}
+
+.nav a {
+  color: #fff;
+  padding: 20px 10px;
+  display: flex;
+}
+
+ul a {
+  text-decoration: none;
+}
+
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -321,7 +336,7 @@ input::placeholder {
 }
 
 .btn.active-btn {
-  background: var(--Primary, #2BD17E);
+  background: #2BD17E;
 }
 
 .movie-content {
@@ -337,6 +352,14 @@ input::placeholder {
   padding-left: 15px;
 }
 
+.toggle-icon {
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: none;
+}
+
 @media(max-width:992px) {
   .movie-container .form {
     margin-left: 30px;
@@ -344,6 +367,20 @@ input::placeholder {
 }
 
 @media(max-width:767px) {
+  .toggle-icon {
+    display: block;
+  }
+
+  .container.nav ul {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .hidden {
+    display: none;
+
+  }
+
   .signin-form-container {
     max-width: 100%;
     width: 100%;
@@ -356,10 +393,12 @@ input::placeholder {
   .img-drop-zon {
     width: 100%;
     margin-top: 50px;
+    height: 300px;
   }
 
   .movie-container .form {
     margin-left: 0px;
+    width: 100%;
   }
 
   .movie-container h1 {
@@ -382,6 +421,16 @@ input::placeholder {
 
   .pagination {
     margin: 50px 0;
+  }
+
+  .nav a {
+    padding: 10px 5px;
+    font-size: 13px;
+  }
+
+  .movie-container .container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
